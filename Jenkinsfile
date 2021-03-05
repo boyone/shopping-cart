@@ -32,18 +32,18 @@ pipeline {
           }
         }
 
-        // stage('code analysis backend') {
-        //   steps {
-        //     sh 'make run_unittest_backend'
-        //     junit 'store-service/*.xml'
-        //     script{
-        //         def scannerHome = tool 'SonarQubeScanner';
-        //         withSonarQubeEnv('SonarQubeScanner'){
-        //             sh "${scannerHome}/bin/sonar-scanner"
-        //         }
-        //     }
-        //   }
-        // }
+        stage('code analysis backend') {
+          steps {
+            sh 'make run_unittest_backend'
+            junit 'store-service/*.xml'
+            // script{
+            //     def scannerHome = tool 'SonarQubeScanner';
+            //     withSonarQubeEnv('SonarQubeScanner'){
+            //         sh "${scannerHome}/bin/sonar-scanner"
+            //     }
+            // }
+          }
+        }
 
       }
     }
