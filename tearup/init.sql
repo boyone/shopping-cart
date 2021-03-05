@@ -10069,7 +10069,7 @@ CREATE TABLE orders (
 
 INSERT INTO orders (id, shipping_method) VALUE (1,"Kerry");
 INSERT INTO orders (id, total_price) 
-VALUE (8004359103,14.59);
+VALUE (8004359104,14.59);
 
 CREATE TABLE order_product (
     order_id BIGINT,
