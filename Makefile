@@ -1,9 +1,9 @@
 frontend: install_dependency_frontend code_analysis_frontend run_unittest_frontend build_frontend
 backend: code_analysis_backend run_unittest_backend run_integratetest_backend build_backend start_service run_newman stop_service
 
-# run_robot: 
-# 	curl http://localhost:8000/mockTime/01032020T13:30:00
-# 	python3 -m robot atdd
+run_robot: 
+	curl http://localhost:8000/mockTime/01032020T13:30:00
+	python3 -m robot atdd
 
 run_newman: 
 	#sleep 15

@@ -91,7 +91,7 @@ pipeline {
   }
   post {
     always {
-      robot outputPath: './', passThreshold: 100.0
+      // robot outputPath: './', passThreshold: 100.0
       sh 'make stop_service'
       sh 'docker volume prune -f'
     }
