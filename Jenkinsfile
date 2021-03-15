@@ -26,13 +26,13 @@ pipeline {
 
     stage('run unit test') {
       parallel {
-        stage('code analysis frontend') {
+        stage('unit test frontend') {
           steps {
             sh 'make run_unittest_frontend'
           }
         }
 
-        stage('code analysis backend') {
+        stage('unit test backend') {
           steps {
             sh 'make run_unittest_backend'
             junit 'store-service/*.xml'
