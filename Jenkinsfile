@@ -81,7 +81,7 @@ pipeline {
     stage('run ATDD') {
       steps {
         sh 'make start_service'
-        sh 'make run_newman'
+        //sh 'make run_newman'
         sh 'make run_robot'
         sh 'make run_load_test'
         sh 'make stop_service'
