@@ -82,7 +82,7 @@ pipeline {
       steps {
         sh 'make start_service'
         sh 'make run_newman'
-        // sh 'make run_robot'
+        sh 'make run_robot'
         sh 'make run_load_test'
         sh 'make stop_service'
       }
@@ -91,7 +91,7 @@ pipeline {
   }
   post {
     always {
-      // robot outputPath: './', passThreshold: 100.0
+      robot outputPath: './', passThreshold: 100.0
       sh 'make stop_service'
       sh 'docker volume prune -f'
     }
