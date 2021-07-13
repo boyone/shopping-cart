@@ -1,6 +1,7 @@
 pipeline {
   agent any
   stages {
+    
     stage('install dependency') {
       steps {
         sh 'make install_dependency_frontend'

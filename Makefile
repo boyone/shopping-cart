@@ -11,6 +11,7 @@ run_newman:
 	newman run atdd/api/shopping_cart_success.json -e atdd/api/environment/local_environment.json -d atdd/api/data/shopping_cart_success.json
 
 run_load_test:
+	sleep 15
 	k6 run -u 10 -d 30s -q atdd/load-k6/order-flow.js
 
 aws_test:
